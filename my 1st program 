@@ -1,4 +1,4 @@
-# 1. Develop a python program to read 2 numbers from the keyboard & perform
+# 1) Develop a python program to read 2 numbers from the keyboard & perform
 # the basic arithmetic operations based on the choice (1-Add, 2-Subtract, 3-Multiply, 4-Divide)
 
 print("Select operations\n")
