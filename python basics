@@ -1,0 +1,14 @@
+# 1b) Develop a program to read name & year of birth of a person
+# Display whether the person is senior citizen or not.
+
+from datetime import date
+
+name = input("Enter the person name: ")
+yob = int(input("Enter the year of birth: "))
+current_year = date.today().year
+age = current_year - yob
+
+if age >= 60:
+    print(name, "is a senior citizen")
+else:
+    print(name, "is not a senior citizen")
