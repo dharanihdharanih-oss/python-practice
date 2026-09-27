@@ -1,0 +1,27 @@
+# 3a) Read N numbers from console & create a list. Develop a program 
+# to print mean, variance & standard deviation with suitable message.
+
+from math import sqrt
+
+my_list = []
+num = int(input("Enter the number of elements in the list: "))
+
+for i in range(num):
+    val = int(input("Enter the element: "))
+    my_list.append(val)
+
+print("The length of list is:", len(my_list))
+print("List contents:", my_list)
+
+mean = sum(my_list) / len(my_list)
+
+total = 0
+for element in my_list:
+    total += (element - mean) * (element - mean)
+
+variance = total / num
+std_dev = sqrt(variance)
+
+print("Mean is:", mean)
+print("Variance is:", variance)
+print("Standard Deviation is:", std_dev)
