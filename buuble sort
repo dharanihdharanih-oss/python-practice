@@ -1,0 +1,28 @@
+Develop a program to read 6 subject marks from the keyboard for a student. Generate a 
+report that displays the marks from the highest to the lowest score attained by the 
+student. [Read the marks into a 1-Dimesional array and sort using the Bubble Sort 
+technique].
+AIM: 
+To develop a Python program to read 6 subject marks from the keyboard, store them in a one-
+dimensional list, sort the marks in descending order using Bubble Sort, and display the marks 
+from the highest to the lowest score.
+PROGRAM:
+def bubble_sort_desc(arr):
+ n = len(arr)
+ for i in range(n - 1):
+ for j in range(n - 1 - i):
+ if arr[j] < arr[j + 1]: # Swap for descending order
+ arr[j], arr[j + 1] = arr[j + 1], arr[j]
+ return arr
+# Step 1: Read marks into a list
+marks = []
+print("Enter marks for 6 subjects:")
+for i in range(6):
+ mark = int(input(f"Enter mark for subject {i + 1}: "))
+ marks.append(mark)
+# Step 2: Sort using Bubble Sort
+sorted_marks = bubble_sort_desc(marks)
+# Step 3: Display the report
+print("\nReport: Marks from highest to lowest")
+for i, mark in enumerate(sorted_marks, start=1):
+ print(f"{i}. {mark}")
